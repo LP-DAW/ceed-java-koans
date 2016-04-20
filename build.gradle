@@ -1,0 +1,21 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+apply plugin: 'maven'
+
+repositories {
+    mavenCentral()
+}
+
+compileJava {
+	sourceCompatibility = "1.8"
+	targetCompatibility = "1.8"	
+}
+
+
+dependencies {   
+   testCompile  'com.javakoan:koan-annotations:1.0.3'
+   testCompile 'joda-time:joda-time:2.+'
+   testCompile 'junit:junit:4.+'
+   testCompile 'org.easymock:easymock:3.4'
+}
